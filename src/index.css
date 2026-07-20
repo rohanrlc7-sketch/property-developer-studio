@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+/* Dark mode theme variables */
+.dark {
+  --bg-main: #0b1329; /* Deep cosmic dark blue/slate */
+  --bg-card: #111a36; /* Clean card background */
+  --bg-card-alt: #1c274c; /* Highlight state cards */
+  --border-color: #23315a; /* Smooth borders */
+  --border-color-light: #2c3e72; /* Lighter inputs border */
+  --text-main: #f1f5f9; /* Soft near-white */
+  --text-secondary: #cbd5e1; /* Clear readability grey */
+  --text-muted: #94a3b8; /* Faded metadata */
+  
+  background-color: #0b1329 !important;
+}
+
+/* Map light-theme Tailwind utility classes to dark mode theme under .dark */
+.dark .bg-slate-50 {
+  background-color: #0b1329 !important;
+}
+
+.dark .bg-white {
+  background-color: var(--bg-card) !important;
+}
+
+.dark .bg-white\/60 {
+  background-color: rgba(17, 26, 54, 0.7) !important;
+}
+
+.dark .bg-white\/75 {
+  background-color: rgba(17, 26, 54, 0.85) !important;
+}
+
+.dark .bg-slate-100 {
+  background-color: var(--bg-card-alt) !important;
+}
+
+/* Borders mapping */
+.dark .border-slate-100,
+.dark .border-slate-150,
+.dark .border-slate-200,
+.dark .border-slate-200\/80,
+.dark .border-indigo-100\/80,
+.dark .border-slate-300 {
+  border-color: var(--border-color) !important;
+}
+
+/* Standard text color overrides */
+.dark .text-slate-900,
+.dark .text-slate-800,
+.dark .text-slate-700,
+.dark .text-slate-650 {
+  color: var(--text-main) !important;
+}
+
+.dark .text-slate-500,
+.dark .text-slate-600 {
+  color: var(--text-secondary) !important;
+}
+
+.dark .text-slate-400 {
+  color: var(--text-muted) !important;
+}
+
+/* Specialized badge & soft box styling overrides */
+.dark .bg-teal-50,
+.dark .bg-teal-50\/50,
+.dark .bg-teal-50\/70,
+.dark .bg-sky-50\/65,
+.dark .bg-emerald-50\/70 {
+  background-color: rgba(13, 148, 136, 0.12) !important;
+  border-color: rgba(13, 148, 136, 0.3) !important;
+  color: #2dd4bf !important;
+}
+
+.dark .text-teal-700,
+.dark .text-teal-800,
+.dark .text-emerald-700 {
+  color: #2dd4bf !important;
+}
+
+.dark .text-teal-600 {
+  color: #14b8a6 !important;
+}
+
+/* Blueprint Canvas area - retain crisp blueprint lines and grids */
+.dark .bg-sky-50\/30 {
+  background-color: rgba(15, 23, 42, 0.4) !important;
+}
+
+/* Fix input fields, range sliders, select options in dark mode */
+.dark select,
+.dark input[type="text"],
+.dark input[type="number"],
+.dark textarea {
+  background-color: var(--bg-card-alt) !important;
+  color: var(--text-main) !important;
+  border-color: var(--border-color-light) !important;
+}
+
+.dark select option {
+  background-color: var(--bg-card) !important;
+  color: var(--text-main) !important;
+}
+
+.dark input[type="range"] {
+  background-color: var(--bg-card-alt) !important;
+}
+
+/* Ensure progress tabs have a distinct backdrop when not active */
+.dark .bg-white\/50 {
+  background-color: rgba(17, 26, 54, 0.4) !important;
+}
+
+.dark .shadow-xs,
+.dark .shadow-sm,
+.dark .shadow-md,
+.dark .shadow-lg {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.4) !important;
+}
+
+
