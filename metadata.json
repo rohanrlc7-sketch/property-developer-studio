@@ -1,0 +1,6 @@
+{
+  "name": "Indian Property Developer Studio",
+  "description": "An all-in-one Indian property builder application featuring 2D structural plans, exact civil engineering material cost calculators, high-fidelity 3D rendering prompts, and personalized interior decorators.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
